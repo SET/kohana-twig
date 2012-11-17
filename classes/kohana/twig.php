@@ -22,7 +22,7 @@ class Kohana_Twig {
 		if ( ! Kohana_Twig::$instance)
 		{
 			// Load Twig configuration
-			Kohana_Twig::$config = Kohana::config('twig');
+			Kohana_Twig::$config = Kohana::$config->load('twig');
 
 			// Create the the loader
 			$loader = new Twig_Loader_Filesystem(Kohana_Twig::$config->templates);
